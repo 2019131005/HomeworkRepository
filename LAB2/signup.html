@@ -8,10 +8,12 @@
     <body>
         <!-- 사용할 것: autofocus, placeholder, required, step, autocomplete -->
         <h1>Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
-        <p>로그인 / 회원가입</p>
-        <form method = "GET" action = "">
+        <p>
+            <a href = "https://2019131005.github.io/HomeworkRepository/LAB2/login.html">로그인</a> / 회원가입
+        </p>
+        <form method = "GET" action = "https://2019131005.github.io/HomeworkRepository/LAB2/signup.html">
             <p>
-                <label>이름 : <input name = "name" type = "text" autofocus /></label>
+                <label>이름 : <input name = "name" type = "text" autofocus required /></label>
             </p>
             <p>
                 <label>생일 : <input name = "" type = "date" /></label>
@@ -23,20 +25,20 @@
                 </label>
             </p>
             <p>
-                <label>학년 : <input name = "" type = "number" min = "1" max = "4" step = "1" /></label>
+                <label>학년 : <input name = "" type = "number" min = "1" max = "4" step = "1" value = "1" /></label>
             </p>
             <p>
-                <label>아이디 : <input name = "" type = "text" /></label>
+                <label>아이디 : <input name = "" type = "text" required /></label>
             </p>
             <p>
-                <label>비밀번호 : <input name = "" type = "text" /></label>
+                <label>비밀번호 : <input name = "" type = "text" required /></label>
             </p>
             <p>
-                <label>이메일 : <input name = "" type = "email" /></label>
+                <label>이메일 : <input name = "" type = "email" required /></label>
             </p>
             <p>
                 <label>보안 질문 : 
-                    <input name = "" type = "text" list = "questions" placeholder = "질문을 선택하세요" />
+                    <select name = "" list = "questions" placeholder = "질문을 선택하세요" required>
                     <datalist id = "questions">
                         <option value = "Q1">
                         <option value = "Q2">
@@ -47,7 +49,7 @@
                 </label>
             </p>
             <p>
-                <label>답변 : <input name = "" type = "text" /></label>
+                <label>답변 : <input name = "" type = "text" required /></label>
             </p>
             <p>
                 <input type = "submit" value = "Signup" />
