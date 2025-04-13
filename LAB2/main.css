@@ -58,7 +58,7 @@ form .radios {
     grid-template-columns: 1fr 4fr 1fr 2fr;
     width: 200px;
     text-align: left;
-    border: 2px solid black
+    /* border: 2px solid black */
 }
 
 form .radio {
