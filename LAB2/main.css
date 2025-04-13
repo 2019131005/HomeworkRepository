@@ -21,16 +21,21 @@ h1 {
 }
 
 form {
-    padding: 15px;
-    margin: 10px;
-    border: 2px;
-    border-color: black;
+    width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid black;
+}
+
+form p label {
+    text-align: left;
 }
 
 .submit input {
-    width: 40px;
-    height: 10px;
+    width: 100px;
+    height: 30px;
     margin: 5px;
+    border-width: 0;
     border-radius: 5px;
 }
 
