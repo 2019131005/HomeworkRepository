@@ -12,44 +12,44 @@
             <a href = "login.html">로그인</a> / 회원가입
         </p>
         <form method = "GET" action = "signup.html">
-            <p>
-                <label>이름 : <input name = "name" type = "text" autofocus required /></label>
-            </p>
-            <p>
-                <label>생일 : <input name = "" type = "date" /></label>
-            </p>
-            <p>
-                <label>성별 : 
-                    <input name = "" type = "radio" value = "male" /> 남성
-                    <input name = "" type = "radio" value = "female" /> 여성
-                </label>
-            </p>
-            <p>
-                <label>학년 : <input name = "" type = "number" min = "1" max = "4" step = "1" value = "1" /></label>
-            </p>
-            <p>
-                <label>아이디 : <input name = "" type = "text" required /></label>
-            </p>
-            <p>
-                <label>비밀번호 : <input name = "" type = "text" required /></label>
-            </p>
-            <p>
-                <label>이메일 : <input name = "" type = "email" required /></label>
-            </p>
-            <p>
-                <label>보안 질문 : 
-                    <select name = "" placeholder = "질문을 선택하세요" required>
-                        <option value = "Q1">
-                        <option value = "Q2">
-                        <option value = "Q3">
-                        <option value = "Q4">
-                        <option value = "Q5">
-                    </select>
-                </label>
-            </p>
-            <p>
-                <label>답변 : <input name = "" type = "text" required /></label>
-            </p>
+            <div class = "input_div">
+                <label>이름</label>
+                <input name = "name" type = "text" autofocus required />
+                
+                <label>생일</label>
+                <input name = "bday" type = "date" />
+
+                <label>성별</label>
+                <div class = "radios">
+                    <input name = "gender" class = "radio" type = "radio" value = "male" /> 남성
+                    <input name = "gender" class = "radio" type = "radio" value = "female" /> 여성
+                </div>
+
+                <label>학년</label>
+                <input name = "grade" type = "number" min = "1" max = "4" step = "1" value = "1" />
+                
+                <label>아이디</label>
+                <input name = "id" type = "text" required />
+                
+                <label>비밀번호</label>
+                <input name = "pw" type = "text" required />
+                
+                <label>이메일</label>
+                <input name = "email" type = "email" required />
+                
+                <label>보안 질문</label>
+                <select name = "qna_q" required>
+                    <option disabled hidden selected>질문을 선택하세요.</option>
+                    <option>Q1</option>
+                    <option>Q2</option>
+                    <option>Q3</option>
+                    <option>Q4</option>
+                    <option>Q5</option>
+                </select>
+                
+                <label>답변</label>
+                <input name = "qna_a" type = "text" required />
+            </div>
             <p class = "submit">
                 <input class = "yes" type = "submit" value = "Signup" />
                 <input class = "no" type = "reset" value = "Cancel" />

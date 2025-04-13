@@ -23,11 +23,55 @@ h1 {
 form {
     width: 500px;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     border: 3px solid black;
 }
 
-form p label {
+.input_div {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-gap:5px;
+}
+
+.input_div label {
+    text-align: left;
+}
+
+.input_div label:after {
+    content: " : ";
+}
+
+form p {
+    text-align: left;
+}
+
+form input {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto
+}
+
+form .radios {
+    justify-self: center;
+    justify-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    width: 200px;
+    text-align: left;
+    border: 2px solid black
+}
+
+form .radio {
+    width: 10px;
+}
+
+form select {
+    width: 200px;
+    justify-self: center;
+    text-align: center;
+}
+
+.submit {
     text-align: left;
 }
 
