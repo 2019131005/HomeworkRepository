@@ -1,0 +1,45 @@
+/* 사용할 것
+background-color
+text-align
+padding
+margin
+border
+font-size
+font-family
+color
+width
+height */
+
+body {
+    background-color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+form {
+    padding: 15px;
+    margin: 10px;
+    border: 2px;
+    border-color: black;
+}
+
+.submit input {
+    width: 40px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.submit .yes {
+    background-color: lightgreen;
+    color: black;
+}
+
+.submit .no {
+    background-color: red;
+    color: white
+}
