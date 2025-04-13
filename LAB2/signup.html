@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel = “stylesheet” type = “text/css” href = “main.css”>
+        <title>Signup</title>
+    </head>
+    <body>
+        <!-- 사용할 것: autofocus, placeholder, required, step, autocomplete -->
+        <h1>Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
+        <p>로그인 / 회원가입</p>
+        <form method = "GET" action = "">
+            <p>
+                <label>이름 : <input name = "name" type = "text" autofocus /></label>
+            </p>
+            <p>
+                <label>생일 : <input name = "" type = "date" /></label>
+            </p>
+            <p>
+                <label>성별 : 
+                    <input name = "" type = "radio" value = "male" /> 남성
+                    <input name = "" type = "radio" value = "female" /> 여성
+                </label>
+            </p>
+            <p>
+                <label>학년 : <input name = "" type = "number" min = "1" max = "4" step = "1" /></label>
+            </p>
+            <p>
+                <label>아이디 : <input name = "" type = "text" /></label>
+            </p>
+            <p>
+                <label>비밀번호 : <input name = "" type = "text" /></label>
+            </p>
+            <p>
+                <label>이메일 : <input name = "" type = "email" /></label>
+            </p>
+            <p>
+                <label>보안 질문 : 
+                    <input name = "" type = "text" list = "questions" placeholder = "질문을 선택하세요" />
+                    <datalist id = "questions">
+                        <option value = "Q1">
+                        <option value = "Q2">
+                        <option value = "Q3">
+                        <option value = "Q4">
+                        <option value = "Q5">
+                    </datalist>
+                </label>
+            </p>
+            <p>
+                <label>답변 : <input name = "" type = "text" /></label>
+            </p>
+            <p>
+                <input type = "submit" value = "Signup" />
+                <input type = "reset" value = "Cancel" />
+            </p>
+        </form>
+    </body>
+</html>
