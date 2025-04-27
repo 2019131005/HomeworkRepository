@@ -1,21 +1,20 @@
 /*  Requirements
-Animation on nav - Animation-duration, Animation-name, @keyframes
+Animation on header - Animation-duration, Animation-name, @keyframes
                 - 헤더 텍스트를 감싸는 컴포넌트들의 width 조절
-width <= 1020px
-image hover -> 2초간 확대 - transition, hover
+\/ width <= 1020px
+\/ image hover -> 2초간 확대 - transition, hover
             -> 영화 이름 띄우기 - hover
-Flexible box layout - flex-container로 네비게이션 구성
+\/ Flexible box layout - flex-container로 네비게이션 구성
                         - flex-direction, flex-wrap, justify-content
                     - 메인 컨텐츠에 flex-container 4개 이상 중첩
                     - 미디어 쿼리 - ( ~480px, 481~800px, 801~ )
-                    
-
-
-
 */
 
-
 body {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1020px;
     background-color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,6 +24,143 @@ h1 {
     font-size: 20px;
 }
 
+h2 {
+    border-bottom: 1px solid black;
+}
+
+/* - - - - - for index.html - - - - - */
+
+.ani_move_left {
+    text-align: left;
+    animation: move_left 2s;
+}
+@keyframes move_left {
+    from { transform: translateX(800px); }
+    to { transform: translateX(0px); }
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+#nav a {
+    margin: 5px 10px;
+    max-width: fit-content;
+}
+
+#nav .current_page {
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+.vertical_flex {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.horizontal_flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.movies {
+    flex-wrap: wrap;
+}
+
+.movie_container {
+    margin: 5px; padding: 5px;
+    border: 1px solid black;
+    height: 250px;
+    justify-content: flex-start;
+}
+
+.mov_tn {
+    width: 70px; height: 70px;
+    margin: 3px;
+    position: relative;
+    transition: transform 2s;
+    background-color: aquamarine;
+}
+
+.mov_tn > img {
+    width: 100%; height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.hover_content {
+    width: 100%; height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.hover_content > p {
+    color: white;
+    transform: translateY(5px);
+    transition: 0.7s;
+}
+
+.mov_tn:hover {
+    transform: scale(1.17, 1.17);
+}
+
+.mov_tn:hover > .hover_content {
+    opacity: 1;
+}
+
+.mov_tn:hover > .hover_content > p {
+    transform: translateY(0px);
+}
+
+#about {
+    text-align: start;
+}
+
+@media (min-width: 801px) {
+    #nav {
+        flex-direction: row;
+    }
+
+    div > h2 {
+        text-align: left;
+    }
+
+    .movie_container {
+        flex: 22%;
+    }
+    
+    #about {
+        column-count: 2;
+        column-gap: 10px;
+        column-rule: 1px outset black;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+    .movie_container {
+        flex: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie_container {
+        flex: 90%;
+    }
+}
+
+/* - - - - - for signup.html - - - - - */
 form {
     width: 500px;
     padding: 20px;
