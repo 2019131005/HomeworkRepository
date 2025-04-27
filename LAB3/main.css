@@ -1,14 +1,19 @@
-/* 사용할 것
-background-color
-text-align
-padding
-margin
-border
-font-size
-font-family
-color
-width
-height */
+/*  Requirements
+Animation on nav - Animation-duration, Animation-name, @keyframes
+                - 헤더 텍스트를 감싸는 컴포넌트들의 width 조절
+width <= 1020px
+image hover -> 2초간 확대 - transition, hover
+            -> 영화 이름 띄우기 - hover
+Flexible box layout - flex-container로 네비게이션 구성
+                        - flex-direction, flex-wrap, justify-content
+                    - 메인 컨텐츠에 flex-container 4개 이상 중첩
+                    - 미디어 쿼리 - ( ~480px, 481~800px, 801~ )
+                    
+
+
+
+*/
+
 
 body {
     background-color: white;
