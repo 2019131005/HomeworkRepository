@@ -1,0 +1,94 @@
+/* 사용할 것
+background-color
+text-align
+padding
+margin
+border
+font-size
+font-family
+color
+width
+height */
+
+body {
+    background-color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+form {
+    width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid black;
+}
+
+.input_div {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-gap:5px;
+}
+
+.input_div label {
+    text-align: left;
+}
+
+.input_div label:after {
+    content: " : ";
+}
+
+form p {
+    text-align: left;
+}
+
+form input {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto
+}
+
+form .radios {
+    justify-self: center;
+    justify-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    width: 200px;
+    text-align: left;
+    /* border: 2px solid black */
+}
+
+form .radio {
+    width: 10px;
+}
+
+form select {
+    width: 200px;
+    justify-self: center;
+    text-align: center;
+}
+
+.submit {
+    text-align: left;
+}
+
+.submit input {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.submit .yes {
+    background-color: lightgreen;
+    color: black;
+}
+
+.submit .no {
+    background-color: red;
+    color: white
+}

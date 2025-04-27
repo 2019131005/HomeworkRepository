@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <title>Signup</title>
+    </head>
+    <body>
+        <!-- 사용할 것: autofocus, placeholder, required, step, autocomplete -->
+        <h1>Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
+        <p>
+            <a href = "login.html">로그인</a> / 회원가입
+        </p>
+        <form method = "GET" action = "signup.html">
+            <div class = "input_div">
+                <label>이름</label>
+                <input name = "name" type = "text" autofocus required />
+                
+                <label>생일</label>
+                <input name = "bday" type = "date" required/>
+
+                <label>성별</label>
+                <div class = "radios">
+                    <input name = "gender" class = "radio" type = "radio" value = "male" required /> 남성
+                    <input name = "gender" class = "radio" type = "radio" value = "female" required /> 여성
+                </div>
+
+                <label>학년</label>
+                <input name = "grade" type = "number" min = "1" max = "4" step = "1" value = "1" required />
+                
+                <label>아이디</label>
+                <input name = "id" type = "text" required autocomplete />
+                
+                <label>비밀번호</label>
+                <input name = "pw" type = "text" required />
+                
+                <label>이메일</label>
+                <input name = "email" type = "email" required placeholder = "name@domain.com"/>
+                
+                <label>보안 질문</label>
+                <select name = "qna_q" required>
+                    <option disabled hidden selected>질문을 선택하세요.</option>
+                    <option>Q1</option>
+                    <option>Q2</option>
+                    <option>Q3</option>
+                    <option>Q4</option>
+                    <option>Q5</option>
+                </select>
+                
+                <label>답변</label>
+                <input name = "qna_a" type = "text" required />
+            </div>
+            <p class = "submit">
+                <input class = "yes" type = "submit" value = "Signup" />
+                <input class = "no" type = "reset" value = "Cancel" />
+            </p>
+        </form>
+    </body>
+</html>
