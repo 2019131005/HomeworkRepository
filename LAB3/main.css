@@ -1,5 +1,5 @@
 /*  Requirements
-Animation on header - Animation-duration, Animation-name, @keyframes
+\/ Animation on header - Animation-duration, Animation-name, @keyframes
                 - 헤더 텍스트를 감싸는 컴포넌트들의 width 조절
 \/ width <= 1020px
 \/ image hover -> 2초간 확대 - transition, hover
