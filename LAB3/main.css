@@ -32,7 +32,8 @@ h2 {
 
 .ani_move_left {
     text-align: left;
-    animation: move_left 2s;
+    animation-name: move_left;
+    animation-duration: 2s;
 }
 @keyframes move_left {
     from { transform: translateX(800px); }
