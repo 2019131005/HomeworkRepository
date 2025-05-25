@@ -78,7 +78,7 @@ h2 {
 }
 
 aside {
-    width: 100px;
+    min-width: 100px;
 }
 
 .movies {
@@ -96,7 +96,6 @@ aside {
 }
 
 .mov_tn {
-    /* width: 90%;  */
     height: 300px;
     margin: 3px;
     position: relative;
