@@ -172,7 +172,7 @@ aside {
 
 @media (max-width: 800px) {
     .movie_container {
-        flex: 1 1 100px;
+        flex: 80%;
     }
 }
 
