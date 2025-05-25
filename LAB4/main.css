@@ -1,0 +1,239 @@
+
+
+
+body {
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1000px;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+/* - - - - - for index.html - - - - - */
+
+.ani_move_left {
+    text-align: left;
+    animation-name: move_left;
+    animation-duration: 2s;
+}
+@keyframes move_left {
+    from { transform: translateX(800px); }
+    to { transform: translateX(0px); }
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+#nav a {
+    margin: 5px 10px;
+    max-width: fit-content;
+}
+
+#nav .current_page {
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+.vertical_flex {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.horizontal_flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.input_line {
+    flex-wrap: wrap;
+}
+
+.input_line input[type=text] {
+    flex: 50%;
+    margin-right: 10px;
+}
+
+/* .input_line input[type=submit] {
+    flex: 5%;
+} */
+
+aside {
+    width: 100px;
+}
+
+.movies {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie_container {
+    margin: 10px; padding: 5px;
+    border: 1px solid black;
+    height: 400px;
+    justify-content: flex-start;
+}
+
+.mov_tn {
+    width: 90%; height: 300px;
+    margin: 3px;
+    position: relative;
+    transition: transform 2s;
+    background-color: aquamarine;
+}
+
+.mov_tn > img {
+    width: 100%; height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.hover_content {
+    width: 100%; height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.hover_content > p {
+    color: white;
+    transform: translateY(5px);
+    transition: 0.7s;
+}
+
+.mov_tn:hover {
+    transform: scale(1.17, 1.17);
+}
+
+.mov_tn:hover > .hover_content {
+    opacity: 1;
+}
+
+.mov_tn:hover > .hover_content > p {
+    transform: translateY(0px);
+}
+
+#about {
+    text-align: start;
+}
+
+@media (min-width: 801px) {
+    #nav {
+        flex-direction: row;
+    }
+
+    div > h2 {
+        text-align: left;
+    }
+
+    .movie_container {
+        flex: 40%;
+    }
+    
+    #about {
+        column-count: 2;
+        column-gap: 10px;
+        column-rule: 1px outset black;
+    }
+}
+
+@media (max-width: 800px) {
+    .movie_container {
+        flex: 90%;
+    }
+}
+
+/* - - - - - for signup.html - - - - - */
+form {
+    width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid black;
+}
+
+.input_div {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-gap:5px;
+}
+
+.input_div label {
+    text-align: left;
+}
+
+.input_div label:after {
+    content: " : ";
+}
+
+form p {
+    text-align: left;
+}
+
+form input {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto
+}
+
+form .radios {
+    justify-self: center;
+    justify-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    width: 200px;
+    text-align: left;
+    /* border: 2px solid black */
+}
+
+form .radio {
+    width: 10px;
+}
+
+form select {
+    width: 200px;
+    justify-self: center;
+    text-align: center;
+}
+
+.submit {
+    text-align: left;
+}
+
+.submit input {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.submit .yes {
+    background-color: lightgreen;
+    color: black;
+}
+
+.submit .no {
+    background-color: red;
+    color: white
+}

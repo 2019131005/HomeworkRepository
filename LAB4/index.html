@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <script src = "product.json"></script>
+        <title>Index</title>
+    </head>
+    <body>
+        <h1 class = "ani_move_left">인프밍 영화 정보 사이트입니다.</h1>
+        <div id = "nav">
+            <a href = "index.html" class = "current_page">메인페이지</a>
+            <a href = "login.html">로그인</a>
+            <a href = "signup.html">회원가입</a>
+        </div>
+        <div class = "vertical_flex">
+            <div class = "horizontal_flex input_line">
+                <input name = "keyword" type = "text" required placeholder = "키워드를 입력하세요."/>
+                <input type = "submit" value = "Filter results" />
+            </div>
+            <div class = "vertical_flex">
+                <h2>Movies</h2>
+                <div class = "horizontal_flex">
+                    <aside>
+                        <p>정렬 기준</p>
+                        <div class = "vertical_flex choose_sort">
+                            <input name = "sort" class = "radio" type = "radio" value = "name_asc" required /> 제목 오름
+                            <input name = "sort" class = "radio" type = "radio" value = "name_desc" required /> 제목 내림
+                            <input name = "sort" class = "radio" type = "radio" value = "rate_asc" required /> 평점 오름
+                            <input name = "sort" class = "radio" type = "radio" value = "rate_desc" required /> 평점 내림
+                        </div>
+                    </aside>
+                    <div class = "horizontal_flex movies">
+                        <div class = "vertical_flex movie_container">
+                            <div class = "mov_tn">
+                                <img src = "Deadpool.jpg" alt = "Deadpool">
+                                <div class = "hover_content">
+                                    <p>Deadpool</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "vertical_flex movie_container">
+                            <div class = "mov_tn">
+                                <img src = "Avatar.jpg" alt = "Avatar">
+                                <div class = "hover_content">
+                                    <p>Avatar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "vertical_flex movie_container">
+                            <div class = "mov_tn">
+                                <img src = "The_Shawshank_Redemption.jpg" alt = "The Shawshank Redemption">
+                                <div class = "hover_content">
+                                    <p>The Shawshank Redemption</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "vertical_flex movie_container">
+                            <div class = "mov_tn">
+                                <img src = "Minions.jpg" alt = "Minions">
+                                <div class = "hover_content">
+                                    <p>Minions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class = "vertical_flex">
+                <h2>About</h2>
+                <section id = "about">
+                    인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 
+                    인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 
+                    인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
