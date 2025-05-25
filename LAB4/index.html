@@ -4,6 +4,52 @@
         <meta charset = "utf-8">
         <link rel = "stylesheet" type = "text/css" href = "main.css">
         <script src = "product.json"></script>
+        <script>
+            let counter = 1;
+            document.addEventListener('DOMContentLoaded', load);
+            window.onscroll = () => {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                    load();
+                }
+            };
+
+            function load() {
+                const start = counter;
+                const end = start + 1;
+                counter = end + 1;
+                fetch('product.json?postId=${start}&postId=${end}')
+                .then(response => response.json())
+                .then(movies => {
+                    movies.forEach(add_movie);
+                })
+            };
+
+            function add_movie(info) {
+                const movie = document.createElement('div');
+                movie.className = 'vertical_flex movie_container';
+                const mov_tn = document.createElement('div');
+                mov_tn.className = 'mov_tn';
+                const img = document.createElement('img');
+                img.src = info.image; img.alt = info.title;
+                const hov = document.createElement('div');
+                hov.className = 'hover_content';
+                const ovvw = document.createElement('p');
+                ovvw.innerHTML = '줄거리:<br>' + info.overview;
+                hov.appendChild(ovvw);
+                mov_tn.append(img, hov);
+                const mov_info = document.createElement('div');
+                mov_info.className = 'vertical_flex mov_info';
+                const title = document.createElement('h3');
+                title.innerHTML = info.title;
+                const date = document.createElement('p');
+                date.innerHTML = info.date;
+                const vote = document.createElement('p');
+                vote.innerHTML = info.vote;
+                mov_info.append(title, date, vote);
+                movie.append(mov_tn, mov_info);
+                document.querySelector('#movies').append(movie);
+            };
+        </script>
         <title>Index</title>
     </head>
     <body>
@@ -20,58 +66,33 @@
             </div>
             <div class = "vertical_flex">
                 <h2>Movies</h2>
-                <div class = "horizontal_flex">
+                <div class = "horizontal_flex align_spbtw">
                     <aside>
                         <p>정렬 기준</p>
                         <div class = "vertical_flex choose_sort">
-                            <input name = "sort" class = "radio" type = "radio" value = "name_asc" required /> 제목 오름
-                            <input name = "sort" class = "radio" type = "radio" value = "name_desc" required /> 제목 내림
-                            <input name = "sort" class = "radio" type = "radio" value = "rate_asc" required /> 평점 오름
-                            <input name = "sort" class = "radio" type = "radio" value = "rate_desc" required /> 평점 내림
+                            <input name = "sort" class = "radio" type = "radio" value = "date_asc" required /> 개봉 오름
+                            <input name = "sort" class = "radio" type = "radio" value = "date_desc" required /> 개봉 내림
+                            <input name = "sort" class = "radio" type = "radio" value = "vote_asc" required /> 평점 오름
+                            <input name = "sort" class = "radio" type = "radio" value = "vote_desc" required /> 평점 내림
                         </div>
                     </aside>
-                    <div class = "horizontal_flex movies">
+                    <div class = "horizontal_flex movies" id = "movies">
+                        <!-- ex)
                         <div class = "vertical_flex movie_container">
                             <div class = "mov_tn">
                                 <img src = "Deadpool.jpg" alt = "Deadpool">
                                 <div class = "hover_content">
-                                    <p>Deadpool</p>
+                                    <p>overview</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class = "vertical_flex movie_container">
-                            <div class = "mov_tn">
-                                <img src = "Avatar.jpg" alt = "Avatar">
-                                <div class = "hover_content">
-                                    <p>Avatar</p>
-                                </div>
+                            <div class = "vertical_flex mov_info">
+                                <h3>title</h3>
+                                <p>date</p>
+                                <p>vote</p>
                             </div>
-                        </div>
-                        <div class = "vertical_flex movie_container">
-                            <div class = "mov_tn">
-                                <img src = "The_Shawshank_Redemption.jpg" alt = "The Shawshank Redemption">
-                                <div class = "hover_content">
-                                    <p>The Shawshank Redemption</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "vertical_flex movie_container">
-                            <div class = "mov_tn">
-                                <img src = "Minions.jpg" alt = "Minions">
-                                <div class = "hover_content">
-                                    <p>Minions</p>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-            <div class = "vertical_flex">
-                <h2>About</h2>
-                <section id = "about">
-                    인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 
-                    인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 
-                    인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 인프밍 영화 정보 사이트입니다. 
-                </section>
             </div>
         </div>
     </body>
